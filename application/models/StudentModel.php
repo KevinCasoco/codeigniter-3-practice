@@ -24,6 +24,12 @@ class StudentModel extends CI_Model
 			return $result  = "Student ID: 2";
 		}
 	}
+
+	public function content()
+	{
+		return $title = "This is Variable data from StudentModel";
+
+	}
 }
 
 ?>
