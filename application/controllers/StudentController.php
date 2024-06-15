@@ -28,17 +28,19 @@ class StudentController extends CI_Controller
         $this->load->model('StudentModel', 'stud_list');
 
         // Fetch student data using the model and the provided ID
-        $selected_student = $this->stud_list->student_list($id);
+        // $selected_student = $this->stud_list->student_list($id);
 
         // Echo the selected student data
-        echo $selected_student;
+        // echo $selected_student;
     }
 
+	// print string using controller
 	public function about_student()
 	{
 		echo "I am student method in StudentController called student in route";
 	}
 
+	// print parameter id with the view
 	public function list($list_url = '')
 	{
 		echo "$list_url";
