@@ -56,13 +56,13 @@ $route['translate_uri_dashes'] = FALSE;
 $route['about'] = 'Welcome/demo';
 
 // with controller method function
-$route['student'] = 'StudentController/index';
-$route['about_us'] = 'StudentController/about_student';
+// $route['student'] = 'StudentController/index';
+// $route['about_us'] = 'StudentController/about_student';
 
-// with controller parameter
-$route['list/:(any)'] = 'StudentController/list/$1';
-$route['list/:(num)'] = 'StudentController/list/$1';
-$route['edit-list/:(num)'] = 'StudentController/edit_list/$1';
+// // with controller parameter
+// $route['list/(:any)'] = 'StudentController/list/$1';
+// // $route['list/(:num)'] = 'StudentController/list/$1';
+// $route['edit-list/:(num)'] = 'StudentController/edit_list/$1';
 
 
 
