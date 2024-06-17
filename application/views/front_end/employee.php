@@ -20,12 +20,14 @@
 								</tr>
 							</thead>
 							<tbody>
+								<?php 
+									foreach ($employee as $row) : ?>
 								<tr>
-									<td>11111</td>
-									<td>Kevs</td>
-									<td>404</td>
-									<td>0909419123</td>
-									<td>kevs@gmail.com</td>
+									<td><?php echo $row->ID ?></td>
+									<td><?php echo $row->first_name ?></td>
+									<td><?php echo $row->last_name ?></td>
+									<td><?php echo $row->phone_number ?></td>
+									<td><?php echo $row->email ?></td>
 									<td>
 										<a href="" class="btn btn-success btn-sm">Edit</a>
 									</td>
@@ -33,6 +35,7 @@
 										<a href="" class="btn btn-danger btn-sm">Delete</a>
 									</td>
 								</tr>
+								<?php endforeach ?>
 							</tbody>
 						</table>
 					</div>

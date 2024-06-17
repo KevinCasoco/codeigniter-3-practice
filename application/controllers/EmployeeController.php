@@ -6,7 +6,17 @@ class EmployeeController extends CI_Controller
 	public function index()
 	{
 		$this->load->view('template/header');
-		$this->load->view('front_end/employee');
+
+		// 1st approach when displaying data from db
+		$this->load->model("EmployeeModel");
+		$data ['employee'] = $this->EmployeeModel->get_employee();
+
+		// 2nd approach when displaying data from db
+		// $this->load->model("EmployeeModel");
+		// $employee = $this->EmployeeModel->get_employee();
+
+		$this->load->view('front_end/employee', $data);
+		// $this->load->view('front_end/employee', ['employee'=>$employee]);
 		$this->load->view('template/footer');
 	}
 
@@ -37,7 +47,7 @@ class EmployeeController extends CI_Controller
 			$this->emp->insert_employee($data);
 			redirect(base_url('employee'));
 		}
-		
+
 		else {
 			$this->create();
 			// redirect(base_url('employee/add'));
