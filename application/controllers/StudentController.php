@@ -53,3 +53,5 @@ class StudentController extends CI_Controller
 		$this->load->view('edit_student_list');
 	}
 }
+
+?>

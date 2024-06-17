@@ -23,3 +23,5 @@ class PageController extends CI_Controller
 	}
 
 }
+
+?>
