@@ -90,5 +90,14 @@ class EmployeeController extends CI_Controller
 		endif;
 
 	}
+
+	public function delete($id)
+	{
+		$this->load->model("EmployeeModel");
+		$this->EmployeeModel->deleteEmployee($id);
+
+		redirect(base_url('employee'));
+	}
+
 }
 ?>

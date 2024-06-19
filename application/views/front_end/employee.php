@@ -32,7 +32,7 @@
 										<a href="<?php echo base_url('employee/edit/'.$row->ID) ?>" class="btn btn-success btn-sm">Edit</a>
 									</td>
 									<td>
-										<a href="" class="btn btn-danger btn-sm">Delete</a>
+										<a href="<?php echo base_url('employee/delete/'.$row->ID) ?>" class="btn btn-danger btn-sm">Delete</a>
 									</td>
 								</tr>
 								<?php endforeach ?>
