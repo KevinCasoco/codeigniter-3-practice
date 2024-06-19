@@ -64,5 +64,31 @@ class EmployeeController extends CI_Controller
 
 		$this->load->view('template/footer');
 	}
+
+	public function update($id)
+	{
+		$this->form_validation->set_rules('first_name', 'First Name', 'required');
+		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
+		$this->form_validation->set_rules('phone_number', 'Phone Number', 'required');
+		$this->form_validation->set_rules('email', 'Email Address', 'required');
+
+		if ($this->form_validation->run()) :
+
+			$data = [
+				'first_name' => $this->input->post('first_name'),
+				'last_name' => $this->input->post('last_name'),
+				'phone_number' => $this->input->post('phone_number'),
+				'email' => $this->input->post('email')
+			];
+
+			$this->load->model("EmployeeModel");
+			$this->EmployeeModel->updateEmployee($data, $id);
+
+			redirect(base_url('employee'));
+		else :
+			$this->edit($id);
+		endif;
+
+	}
 }
 ?>

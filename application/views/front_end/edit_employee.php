@@ -7,7 +7,7 @@
 						<h5>Edit Employee Info</h5>
 					</div>
 					<div class="card-body">
-						<form action="<?php echo base_url('employee/store'); ?>" method="POST">
+						<form action="<?php echo base_url('employee/update/'.$employee->ID); ?>" method="POST">
 							<div class="form-group">
 								<label for="first_name">First Name</label>
 								<input type="text" name="first_name" value="<?= $employee->first_name ?>" class="form-control">
