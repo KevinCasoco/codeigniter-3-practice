@@ -53,5 +53,16 @@ class EmployeeController extends CI_Controller
 			// redirect(base_url('employee/add'));
 		}
 	}
+
+	public function edit($id)
+	{
+		$this->load->view('template/header');
+
+		$this->load->model("EmployeeModel");
+		$data ['employee'] = $this->EmployeeModel->editEmployee($id);
+		$this->load->view('front_end/edit_employee', $data);
+
+		$this->load->view('template/footer');
+	}
 }
 ?>

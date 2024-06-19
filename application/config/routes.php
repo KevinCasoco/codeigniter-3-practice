@@ -68,3 +68,4 @@ $route['edit-list/:(num)'] = 'StudentController/edit_list/$1';
 $route['employee'] = 'EmployeeController/index';
 $route['employee/add'] = 'EmployeeController/create';
 $route['employee/store'] = 'EmployeeController/store';
+$route['employee/edit/(:any)'] = 'EmployeeController/edit/$1';

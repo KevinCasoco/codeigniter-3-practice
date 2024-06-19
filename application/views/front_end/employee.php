@@ -29,7 +29,7 @@
 									<td><?php echo $row->phone_number ?></td>
 									<td><?php echo $row->email ?></td>
 									<td>
-										<a href="" class="btn btn-success btn-sm">Edit</a>
+										<a href="<?php echo base_url('employee/edit/'.$row->ID) ?>" class="btn btn-success btn-sm">Edit</a>
 									</td>
 									<td>
 										<a href="" class="btn btn-danger btn-sm">Delete</a>
