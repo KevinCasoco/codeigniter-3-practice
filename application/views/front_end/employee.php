@@ -7,7 +7,7 @@
 						<h5>Employee Table</h5>
 					</div>
 					<div class="card-body">
-						<table class="table table-bordered">
+						<table id="empTable" class="table table-bordered">
 							<thead>
 								<tr>
 									<th>ID</th>
@@ -36,7 +36,7 @@
 										<a href="<?php echo base_url('employee/delete/'.$row->ID) ?>" class="btn btn-danger btn-sm">Delete</a>
 									</td>
 									<td>
-										<button type="submit" value="<?= $row->ID ?>" class="btn btn-danger confirm-delete">Confirm Delete</button>
+										<button type="submit" value="<?= $row->ID ?>" class="btn btn-danger btn-sm confirm-delete">Confirm Delete</button>
 									</td>
 								</tr>
 								<?php endforeach ?>
