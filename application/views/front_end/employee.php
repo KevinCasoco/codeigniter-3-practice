@@ -17,6 +17,7 @@
 									<th>Email Address</th>
 									<th>Edit</th>
 									<th>Delete</th>
+									<th>Confirm Delete</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -33,6 +34,9 @@
 									</td>
 									<td>
 										<a href="<?php echo base_url('employee/delete/'.$row->ID) ?>" class="btn btn-danger btn-sm">Delete</a>
+									</td>
+									<td>
+										<button type="submit" value="<?= $row->ID ?>" class="btn btn-danger confirm-delete">Confirm Delete</button>
 									</td>
 								</tr>
 								<?php endforeach ?>
